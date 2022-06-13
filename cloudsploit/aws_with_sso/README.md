@@ -48,7 +48,7 @@ See https://github.com/aquasecurity/cloudsploit for cloudsploit readme etc..
 ```
 
 # FOR SSO ENVIRONMENTS INSTALL aws-sso-util
-# aws-sso-util makes sso auth much easier to manage at the CLI
+aws-sso-util makes sso auth much easier to manage at the CLI
 
 https://pypi.org/project/aws-sso-util/
 
@@ -85,7 +85,7 @@ Configure cloudsploit to use environment variables, an example config file is in
 credentials: {
         aws: {
             // OPTION 1: If using a credential JSON file, enter the path below
-            // credential_file: '/mnt/c/cloudhygiene/creds/creds.json',
+            // credential_file: '',
             // OPTION 2: If using hard-coded credentials, enter them below
             access_key: process.env.AWS_ACCESS_KEY_ID || '',
             secret_access_key: process.env.AWS_SECRET_ACCESS_KEY || '',
