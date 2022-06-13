@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # REQURIES 
-# jq
+# jq, pandas
+# scout2csv.py
 # aws-sso-util
-# assumes cloudsploit is in ~/cloudsploit
-# requires config_aws.js in ~/cloudsploit
+# assumes scoutsuite is in ~/scoutsuite
 
 CONFIG_FILE=~/.aws/config
 CREDS=~/CREDS
