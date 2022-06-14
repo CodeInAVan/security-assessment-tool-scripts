@@ -50,7 +50,7 @@ while IFS='=' read -r key; do
 done < $CREDS/aws_role_list.txt
 
 #combine the csv files into one file
-rm $REPORTS/combined.csv -f
+rm $REPORTS/cloudsploit_combined.csv -f
 awk -v OFS=',' '
     NR == 1 { print "filename", $0 }
     FNR > 1 { print FILENAME, $0 }
