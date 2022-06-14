@@ -49,5 +49,10 @@ while IFS='=' read -r key; do
    ./index.js --csv $REPORTS/$AWS_PROFILE.csv --console=none --config=$cloudsploit/config_aws.js
 done < $CREDS/aws_role_list.txt
 
-
+#combine the csv files into one file
+rm $REPORTS/combined.csv -f
+awk -v OFS=',' '
+    NR == 1 { print "filename", $0 }
+    FNR > 1 { print FILENAME, $0 }
+' $REPORTS/*.csv >$REPORTS/cloudsploit_combined.csv
 
