@@ -4,7 +4,7 @@ import pandas as pd
 import json
 from pathlib import Path
 
-results = list(Path(".").rglob("scoutsuite_results_aws*.js"))
+results = list(Path(".").rglob("scoutsuite_results_*.js"))
 df = pd.DataFrame()
 
 for result in results:
