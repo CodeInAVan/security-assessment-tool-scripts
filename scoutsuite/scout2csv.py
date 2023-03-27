@@ -20,6 +20,6 @@ for result in results:
 			if finding['flagged_items'] > 0:
 				findings.append({'folder name': foldername, 'account id': accountid, 'service': finding['service'], 'title': finding['description'], 'rationale': finding['rationale'], 'level': finding['level'], 'remediation': finding['remediation'], 
 					'checked #': finding['checked_items'], 'flagged #': finding['flagged_items'], 'items': finding['items']})
-	df = df.append(findings)
+	df = pd.concat([df,pd.DataFrame(findings)])
 print(df)
 df.to_csv( "tool_output.csv", index=False, encoding='utf-8-sig')
